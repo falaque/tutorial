@@ -1,4 +1,20 @@
 
+
+
+
+
+View the Previous version:
+--------------------------------------
+$git checkout <hash>
+ e.g. git checkout 64ea39c
+# this will checkout version corresponding to hash 64ea39c in the branch.
+
+# Return the latest version in the master branch
+
+$git checkout master
+
+
+
 History:
 ========
 $ git log
@@ -42,6 +58,20 @@ adding file to a repository:(using https://github.com)
 	(it will ask username and password)
 
 
+adding a change and committing to a file:
+=========================================
+* modify the file tutorial_git.txt
+* stage it :
+	$ git add tutorial_git.txt
+* again modify the file tutorial_git.txt
+* stage it :
+	$ git add tutorial_git.txt
+* commit it :
+	$ git commit -m "added about viewing pervious changes and commiting"
+* push it to remote repo:
+	$ git push origin master
+	
+	
 
 starting with git:(only first time)
 ===================================
