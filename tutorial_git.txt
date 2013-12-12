@@ -1,8 +1,20 @@
 
 
-
-starting with git:
-==================
-* Modify the C:\Program Files (x86)\Git\etc\profile file to change $HOME directory.
+adding file to a repository:(using https://github.com)
+======================================================
+* add a repository tutorial as https://github.com/falaque/tutorial
 * 
+
+
+
+starting with git:(only first time)
+===================================
+(https://help.github.com/articles/set-up-git)
+* Modify the C:\Program Files (x86)\Git\etc\profile file to change $HOME directory.
+* use following command:
+  - git config --global user.name "Your Name Here"
+      # Sets the default name for git to use when you commit
+  - git config --global user.email "your_email@example.com"
+      # Sets the default email for git to use when you commit
+* if using window this is enough.
 
