@@ -1,9 +1,25 @@
 
 
+pulling the remote files:
+========================
+$ git pull origin master
+
 adding file to a repository:(using https://github.com)
 ======================================================
-* add a repository tutorial as https://github.com/falaque/tutorial
-* 
+* add a repository tutorial in github as https://github.com/falaque/tutorial
+* run commands:
+	$ mkdir tutorial
+	$ cd tutorial
+	$ git init
+ * inside tutorial folder add the file tutorial_git.txt then run command(in folder tutorial):
+	$ git add tutorial_git.txt
+	$ git commit -m 'adding file' 				
+			# commit file
+	$ git remote add origin https://github.com/falaque/tutorial.git 
+			# Creates a remote named "origin" pointing at your GitHub repository
+	$ git push origin master
+			# Sends your commits in the "master" branch to GitHub
+	(it will ask username and password)
 
 
 
