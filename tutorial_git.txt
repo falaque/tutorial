@@ -1,3 +1,13 @@
+Looking committed unpushed changes:
+-----------------------------------
+* view in current branch
+  $ git log origin/master..HEAD
+* view the diff in current branch:
+  $ git diff origin/master..HEAD
+
+* if you want to see all commits on all branches:
+  $ git log --branches --not --remotes
+
 
 Resetting the staging area:
 ---------------------------
