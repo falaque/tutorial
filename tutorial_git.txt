@@ -1,5 +1,15 @@
 
-
+Resetting the staging area:
+---------------------------
+* change the file:
+ $ git add tutorial_git.txt
+ $ git status
+* reset the staging area
+ $ git reset HEAD tutorial_git.txt
+ $ git status
+* checkout the committed version
+ $ git checkout tutorial_git.txt
+ $ git status
 
 
 
