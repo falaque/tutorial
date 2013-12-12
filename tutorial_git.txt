@@ -1,4 +1,24 @@
 
+History:
+========
+$ git log
+$ git log --pretty=oneline #one line histories
+$ git 
+#--------some other format
+git log --pretty=oneline --max-count=2
+git log --pretty=oneline --since='5 minutes ago'
+git log --pretty=oneline --until='5 minutes ago'
+git log --pretty=oneline --author=<your name>
+git log --pretty=oneline --all
+
+#-------graph
+
+$git log --graph
+
+#------- ultimate
+
+$ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
 
 pulling the remote files:
 ========================
