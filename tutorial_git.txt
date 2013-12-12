@@ -1,0 +1,8 @@
+
+
+
+starting with git:
+==================
+* Modify the C:\Program Files (x86)\Git\etc\profile file to change $HOME directory.
+* 
+
