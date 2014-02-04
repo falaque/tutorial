@@ -1,5 +1,37 @@
+Undo a commit and redo
+----------------------
+$ git commit ...              (1)
+$ git reset --soft 'HEAD^'    (2)
+$ edit                        (3)
+$ git add ....                (4)
+$ git commit -c ORIG_HEAD     (5)
+This is what you want to undo
+
+This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before "reset". (The quotes may or may not be required in your shell)
+
+Make corrections to working tree files.
+
+Stage changes for commit.
+
+"reset" copies the old head to .git/ORIG_HEAD; redo the commit by starting with its log message. If you do not need to edit the message further, you can give -C option instead.
+
+
+
+Add remote repository:
+----------------------
+ex1: 
+cd existing_git_repo
+git remote add origin git@github.com:caius/foo.git
+
+ex2:
+
+$ git remote add origin ssh://git.amazon.com:2222/pkg/STORMDataAccess
+$ git pull
+$ git checkout hibernateimpl
+
 Looking committed unpushed changes:
 -----------------------------------
+
 * view in current branch
   $ git log origin/master..HEAD
 * view the diff in current branch:
