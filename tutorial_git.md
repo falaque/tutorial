@@ -1,10 +1,12 @@
 Undo a commit and redo
-----------------------
-$ git commit ...              (1)
-$ git reset --soft 'HEAD^'    (2)
-$ edit                        (3)
-$ git add ....                (4)
-$ git commit -c ORIG_HEAD     (5)
+----------------------	
+```bash
+$ git commit ...              #(1)
+$ git reset --soft 'HEAD^'    #(2)
+$ edit                        #(3)
+$ git add ....                #(4)
+$ git commit -c ORIG_HEAD     #(5)
+```
 This is what you want to undo
 
 This is most often done when you remembered what you just committed is incomplete, or you misspelled your commit message, or both. Leaves working tree as it was before "reset". (The quotes may or may not be required in your shell)
@@ -16,19 +18,19 @@ Stage changes for commit.
 "reset" copies the old head to .git/ORIG_HEAD; redo the commit by starting with its log message. If you do not need to edit the message further, you can give -C option instead.
 
 
-
 Add remote repository:
 ----------------------
-ex1: 
+####ex1: 
+```bash
 cd existing_git_repo
 git remote add origin git@github.com:caius/foo.git
-
-ex2:
-
+```
+####ex2:
+```bash
 $ git remote add origin ssh://git.amazon.com:2222/pkg/STORMDataAccess
 $ git pull
 $ git checkout hibernateimpl
-
+```
 Looking committed unpushed changes:
 -----------------------------------
 
@@ -148,3 +150,8 @@ starting with git:(only first time)
       # Sets the default email for git to use when you commit
 * if using window this is enough.
 
+view:
+-----
+* Changed files in working directory `$ git status`
+* Differences `$ git diff`
+* Who changed what and when in file: `$ git blame <file name>`
