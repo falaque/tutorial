@@ -57,7 +57,7 @@ Resetting the staging area:
 
 View the Previous version:
 --------------------------------------
-$git checkout <hash>
+`$git checkout <hash>`
  e.g. git checkout 64ea39c
 # this will checkout version corresponding to hash 64ea39c in the branch.
 
@@ -70,9 +70,13 @@ $git checkout master
 History:
 ========
 $ git log
+
 $ git log --pretty=oneline #one line histories
+
 $ git 
+
 #--------some other format
+
 git log --pretty=oneline --max-count=2
 git log --pretty=oneline --since='5 minutes ago'
 git log --pretty=oneline --until='5 minutes ago'
@@ -96,9 +100,17 @@ adding file to a repository:(using https://github.com)
 ======================================================
 * add a repository tutorial in github as https://github.com/falaque/tutorial
 * run commands:
+
+
+
+
 	$ mkdir tutorial
 	$ cd tutorial
 	$ git init
+	
+	
+	
+	
  * inside tutorial folder add the file tutorial_git.txt then run command(in folder tutorial):
 	$ git add tutorial_git.txt
 	$ git commit -m 'adding file' 				
