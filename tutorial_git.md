@@ -51,7 +51,10 @@ Looking committed unpushed changes:
 * view in current branch
   `$ git log origin/master..HEAD`
 * view the diff in current branch:
-  `$ git diff origin/master..HEAD`
+```
+  $ git diff origin/master..HEAD
+  $ git diff origin/master app.js #for a file app.js
+```
 
 * if you want to see all commits on all branches:
   `$ git log --branches --not --remotes`
@@ -125,8 +128,12 @@ $ git log --pretty=oneline --follow <filename> #one line for each commit
 $ git log --pretty=oneline --name-only --follow <filename> #show file name at the end
 
 $ git log --pretty=oneline --name-status --follow <filename> #shows operation info along with file name at the end
+
+#also try
+
+$ git log --pretty=oneline --name-status --decorate --follow <filename>
 ```
-* Use `--decorate'
+* Use `--decorate`
 
 adding file to a repository:(using https://github.com)
 ------------------------------------------------------
