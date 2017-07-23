@@ -1,6 +1,6 @@
 Basic:
 ------
-- to update your local repository to the newest commit : `git pull'
+- to update your local repository to the newest commit : `git pull`
 - built-in git GUI `gitk`
 - use colorful git output `git config color.ui true`
 - use interactive adding `git add -i`
