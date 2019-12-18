@@ -41,7 +41,7 @@ git remote add origin git@github.com:caius/foo.git
 ```
 ##### ex2:
 ```bash
-$ git remote add origin ssh://git.amazon.com:2222/pkg/STORMDataAccess
+$ git remote add origin https://github.com/falaque/tutorial.git
 $ git pull
 $ git checkout hibernateimpl
 ```
@@ -97,7 +97,9 @@ $ git log
 
 $ git log --pretty=oneline #one line histories
 
-$ git 
+$ git log -p -2 #shows the diff as well, shows only last 2 entries
+
+$ git log --state #show abbreviated stats for each commit
 
 #--------some other format
 
@@ -117,8 +119,12 @@ $ git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
 $ git log --graph --oneline --decorate #nice one
 
+#gits "pickaxe" option: takes a string and shows only those commits that changed the number of occurrences of that string. in below case it looks for "functoin_name" string:
+
+$ git log -S function_name
+
 ```
-##### View history of one file
+#### View history of one file
 (use --follow <file name > with `git log` command)
 ```bash
 $ git log --follow <filename>
@@ -210,3 +216,39 @@ $ git fetch origin
 #or
 $ git reset --hard origin/master
 ```
+
+Git behind a proxy server:
+--------------------------
+Command to use:
+```
+git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+```
+If you decide at any time to reset this proxy and work without proxy:
+```
+git config --global --unset http.proxy
+```
+to check the currently set proxy:
+```
+git config --global --get http.proxy
+```
+Reference: https://stackoverflow.com/a/19213999
+
+Config:
+-------
+* List all config: `git config --list`
+* List all global config: `git config --global --list`
+* List all local config: `git config --local --list`
+* Check applicable value for key: `git config user.name`
+* Check local value for key: `git config --local user.name`
+* Check value for key: `git config --global user.name`
+
+Branching & Merging:
+--------------------
+* To see the last commit on each branch: `git branch -v`
+* To see which branches are already merged into the branch you’re on: `git branch --merged`
+* To see all the branches that contain work you haven’t yet merged in: `git branch --no-merged`
+
+Some other interesting stuff:
+-----------------------------
+* Archive a branch: http://www.aaronwest.net/blog/index.cfm/2011/6/7/Git-Workflows-Archiving-Old-Branches
+* 
