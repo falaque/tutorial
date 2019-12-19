@@ -241,6 +241,8 @@ Config:
 * Check applicable value for key: `git config user.name`
 * Check local value for key: `git config --local user.name`
 * Check value for key: `git config --global user.name`
+* Set global email configuration: `git config --global user.email "MY_NAME@example.com"`
+* Set repo specific email configuration: `git config user.email "MY_NAME@example.com"`
 
 Branching & Merging:
 --------------------
