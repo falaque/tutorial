@@ -250,6 +250,8 @@ Branching & Merging:
 * To see which branches are already merged into the branch you’re on: `git branch --merged`
 * To see all the branches that contain work you haven’t yet merged in: `git branch --no-merged`
 * To create a new branch that has no parent commit(meaning it does not inherit any commit history from existing branches. This effectively creates a new, independent history within the same repository): `git checkout --orphan <new-branch-name>`
+* To delete a local branch that has been fully merged into another branch (e.g., main or master): `git branch -d <branch_name>`
+* To delete a local branch regardless of whether it's merged or contains uncommitted changes, use the force option: `git branch -D <branch_name>`
 
 Some other interesting stuff:
 -----------------------------
