@@ -249,6 +249,7 @@ Branching & Merging:
 * To see the last commit on each branch: `git branch -v`
 * To see which branches are already merged into the branch you’re on: `git branch --merged`
 * To see all the branches that contain work you haven’t yet merged in: `git branch --no-merged`
+* To create a new branch that has no parent commit(meaning it does not inherit any commit history from existing branches. This effectively creates a new, independent history within the same repository): `git checkout --orphan <new-branch-name>`
 
 Some other interesting stuff:
 -----------------------------
