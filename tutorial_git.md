@@ -253,7 +253,27 @@ Branching & Merging:
 * To delete a local branch that has been fully merged into another branch (e.g., main or master): `git branch -d <branch_name>`
 * To delete a local branch regardless of whether it's merged or contains uncommitted changes, use the force option: `git branch -D <branch_name>`
 
+Deleting a merged branch from local and remote:
+-----------------------------------------------------
+
+* From the main branch: list merged branches
+
+```bash
+git checkout main
+git fetch origin   # optional but recommended
+git branch --merged
+```
+
+* If feature/my-branch appears → it is already merged into main.
+* If it does not appear → it has not been fully merged.
+
+After confirming it’s merged, delete remote branch safely:
+
+```bash
+git push origin --delete feature/my-branch
+```
+
 Some other interesting stuff:
 -----------------------------
 * Archive a branch: http://www.aaronwest.net/blog/index.cfm/2011/6/7/Git-Workflows-Archiving-Old-Branches
-* 
+  
