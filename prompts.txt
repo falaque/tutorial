@@ -11,4 +11,4 @@ Use clear, Arrange–Act–Assert structure inside each test.
 Name test methods clearly, following a pattern like MethodName_Scenario_ExpectedResult.
 Ensure tests are independent, deterministic, and do not rely on external state (files, network, database, etc.).
 Assume the this class is already implemented and available in the main project. Generate only the test code file.
-Use FluentAssertions for assertions
+Dont use FluentAssertions for assertions
