@@ -270,7 +270,11 @@ git branch --merged
 After confirming it’s merged, delete remote branch safely:
 
 ```bash
+# delete the remote branch 
 git push origin --delete feature/my-branch
+
+# delete the local branch
+git branch -d feature/my-branch
 ```
 
 Some other interesting stuff:
